@@ -404,5 +404,6 @@ df[df['y1']==1.312015]
 #Apply function to each row
 df['y1']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
 print(df)
-
+df['y2']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
+print(df)
 
