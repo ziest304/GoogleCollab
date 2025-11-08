@@ -377,31 +377,31 @@ pd.set_option('display.max_colwidth', None)      #show full cell content
 print(df)
 
 #Select Specific Rows
-df.iloc[0]
-df.iloc[8]
-df.iloc[1:3]
+df.iloc[1]
+df.iloc[10]
+df.iloc[2:17]
 df.iloc[5:13]
-df.iloc[:13]
+df.iloc[:17]
 
 #Add New Row
-new_row = {'y1':1.5,'y2':0.90,'x1':0.80,'x2':0.90}
+new_row = {'y1':1.7,'y2':0.99,'x1':0.88,'x2':0.10,'x3':0.10}
 df.loc[len(df)]=new_row
 print(df)
 
 #Delete Row
-df = df.drop(200)  #remove row with index 2
+df = df.drop(199)  #remove row with index 2
 df = df.reset_index(drop=True)  #Reset row numbering
 print(df)
-df = df.drop(199)  #remove row with index 2
+df = df.drop(198)  #remove row with index 2
 df = df.reset_index(drop=True)  #Reset row numbering
 print(df)
 
 #Filter Rows (By Condition)
 #By Age
-df[df['y1']>2]
-df[df['y2']<2]
-df[df['y1']==2]
-df[df['y1']==1.312015]
+df[df['y1']>2.571523]
+df[df['y2']<-1.949036]
+df[df['y1']==2.623457]
+df[df['y1']==4.874797]
 
 #Apply function to each row
 df['y1']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
