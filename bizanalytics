@@ -1,0 +1,408 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+#Variables
+x = 34
+name = "Together"
+price = 205
+
+#Printing variables
+print(x)
+print(name)
+print(price)
+
+#Strings
+name = "Terry"
+greetings = ' Hello, Terry!'
+#Creating Multiline Strings
+message = """This is a very sweet 
+fandom"""
+print(message)
+
+#Concatenation - Joining Strings
+name + greetings
+
+#Repetition
+name*5
+len(name)
+len(price)
+len(str)
+len(greetings)
+
+#indexing
+name[0]
+name[2]
+name[3]
+
+#Slicing
+name[0:3]
+name[0:4]
+name[2:4]
+
+
+
+#creating a list
+fruits = ["mango", "lemon", "kiwi"]
+numbers = [11, 22, 33, 44]
+mixed = ["terry", 500, False, 4.30]
+
+#access the list
+fruits = ["mango", "lemon", "kiwi"]
+print(fruits[0])
+print(fruits[2])
+print(fruits[1])
+
+#slicing list
+numbers = [ 111, 222, 333, 444, 555]
+print(numbers[1:4])
+print(numbers[2:4])
+print(numbers[1:4])
+print(numbers[3:4])
+print(numbers[4:4])
+
+
+fruits = ["mango", "lemon", "kiwi"]
+fruits[1] = "orange"
+print(fruits[1])
+fruits[2] = "pineapple"
+print(fruits)
+
+colors = ["blue", "red", "green"]
+colors[1]="purple"
+print(colors[1])
+print(colors)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Nesting
+#%% Nested Lists
+lst_1 = [1 ,2 ,3]
+lst_2 = [4 ,5 ,6]
+lst_3 = [7 ,8 ,9]
+
+matrix=[lst_1,lst_2,lst_3]
+print(matrix)
+print(matrix[0])
+print(matrix[0][0])
+
+#Creating Dictionary
+student = {
+    "name": "Joziel",
+    "age": 30,
+    "course":"Economics"}
+
+#Accessing Value in a Dictionary
+print(student["name"])
+print(student.get("course"))
+
+#Changing and Adding in the List
+student["age"]=29
+student["university"]="PUP"
+print(student)
+
+#Nested Dictionaries
+students = {
+    "304":{ "name": "Terry", "grade": 98},
+    "305":{ "name": "Kai", "grade": 89  }
+    }
+
+print(students["304"]["name"])
+print(students["304"]["grade"])
+print(students["305"]["name"])
+print(students["305"]["grade"])
+
+#Creating Dictionary
+idol = {
+    "name": "Juheon",
+    "age": 20,
+    "group":"Cortis"}
+
+#Accessing Value in a Dictionary
+print(idol["name"])
+print(idol.get("group"))
+
+#Changing and Adding in the List
+idol["age"]=21
+idol["company"]="HYBE"
+print(idol)
+
+#Nested Dictionaries
+students = {
+    "304":{ "name": "Steve", "group": "TXT"},
+    "305":{ "name": "James", "group": "Cortis"}
+    }
+
+print(students["304"]["name"])
+print(students["304"]["group"])
+print(students["305"]["name"])
+print(students["305"]["group"])
+
+#Creatig Tuple
+idol = ("kai", "terry", "steve")
+numbers = (11, 22, 33, 44)
+mixed = ("terry", 500, False, 4.30)
+
+#Access Tuple
+print(idol[0])
+print(idol[2])
+print(idol[1])
+
+#Slicing Tuple
+numbers = (111, 222, 333, 444, 555)
+print(numbers[1:4])
+print(numbers[2:4])
+print(numbers[1:4])
+print(numbers[3:4])
+
+#Unpacking
+idol = ("Juheon", 20, "Cortis")
+name, age, group = idol
+
+print(name)  #Juheon
+print(age)   #20
+print(group) #Cortis
+
+#Creating Numpy
+import numpy as np #to import numpy
+arr = np.array([11,22,33,44,55])
+print(arr)
+
+a = np.array([3, 0, 4])
+#2D Array (matrix)
+b = np.array([[6, 7, 8],[1, 4, 3]])
+#3D Array 
+c = np.array([[[2,3],[4,5]],[[6,7],[8,9]]])
+
+
+import pandas as pd
+data = {'Name':['Ana','Beth','Cathy'],
+        'Age':[22,25,24],
+        'City':['Manila','Cebu','Davao']}
+df= pd.DataFrame(data)
+print(df)
+
+import pandas as pd
+data = {'BoyGroup':['Terry','Ben','Steve','Daniel'],
+        'Korean Name':['Taehyun','Gyu','Soob','Yeonjun'],
+        'Favorite Color':['Blue','Pink','Purple','Green']}
+df= pd.DataFrame(data)
+print(df)
+
+import pandas as pd
+data = {'Boy Group':['Terry','Ben','Steve','Daniel','Kai'],
+        'Korean Name':['Taehyun','Gyu','Soob','Yeonjun','Huening'],
+        'Favorite Color':['Blue','Pink','Purple','Green','White'],
+        'Lucky Number':[5,13,5,9,18]}
+df= pd.DataFrame(data)
+print(df)
+
+import pandas as pd
+data = {'Idol Names':['Terry','Ben','Steve','Daniel','Kai','Martin','James','Jun','Seon','Ken'],
+        'Korean Name':['Taehyun','Gyu','Soob','Yeonjun','Huening','Woobin','Seojun','Juheon','Seonghyeon', 'Kyeon'],
+        'Favorite Color':['Blue','Pink','Purple','Green','White','Aqua','Black','Red','Silver','Gold'],
+        'Lucky Number':[5,13,5,9,18,1,7,89,2,10],
+        'Group Name':['TXT','TXT','TXT','TXT','TXT','Cortis','Cortis','Cortis','Cortis','Cortis'],
+        'Blood Type':['A','AB','A','B','O','A','A','AB','A','B'],
+        'Favorite Flower':['Sunflower','Rose','Tulip','Lily','Daisy','Lotus','Orchid','Lavender','Dahlia','Iris'],
+        'Birth Year':['2001','2000','2000','1999','20001','2008','2005','2008','2009','2009'],
+        'Birth Country':['South Korea','South Korea','South Korea','South Korea','US','Canada','Hongkong','South Korea','South Korea','South Korea'],
+        'Zodiac Sign':['Aquarius','Pisces','Sagittarius','Virgo','Leo','Pisces','Libra','Capricorn','Capricorn','Aquarius']}
+df= pd.DataFrame(data)
+print(df)
+
+
+#Creating Series Method2
+import pandas as pd
+series=pd.Series([10,20,330,40], index=['A','B','c','d'])
+print(series)
+
+#Creating Series Method2
+import pandas as pd
+s=pd.Series([10,20,330,40], index=['A','B','c','d'])
+print(s)
+
+#Creating Series Method1
+import pandas as pd
+list=[10,20,30,40]
+labels=['a','b','c','d']
+print(pd.Series(data=list, index=labels))
+
+#Importing Data
+import pandas as pd
+data=pd.read_csv("sales.csv")
+print(data)
+data.head()
+
+
+#Creating Columns
+import pandas as pd
+df = pd.DataFrame({'price':[100,200,300],'quantity':[2,3,5]})
+#Creating New Columns
+df['total']=df['price']*df['quantity']
+print(df)
+
+#Creating Columns
+import pandas as pd
+df = pd.DataFrame({'flower':[2,4,6],'quantity':[1,3,5],'price':[10,20,30],'freebies':[1,2,3]})
+#Creating New Columns
+df['total']=df['flower']*df['quantity']
+print(df)
+
+#Rename
+df.rename(columns={'flower':'candies','quantity':'qty'},inplace=True)
+print(df)
+
+#3 Drop Columns
+df=df.drop(columns=['total'])
+print(df)
+
+#Apply Function to a Column
+#Apply %22 discount
+df['discount']=df['candies']*0.22
+print(df)
+
+#Conditional Column (if/else logic)
+df['status']=df['qty'].apply(lambda x: 'Bulk' if x > 2 else 'Regular')
+print(df)
+
+#Column Aggregation - Summing Columns
+total_price = df['candies'].sum()
+average_price = df['candies'].mean()
+
+print("Total",total_price)
+print("Average", average_price)
+
+#Combine Columns - Add Subtract or Divide
+df['ratio']=df['candies']/df['discount']
+print(df)
+
+#reorder Columns
+df = df[['qty','candies','discount','ratio','status']]
+print(df)
+
+#Column Statistics
+print(df['candies'].describe())
+print(df['qty'].describe())
+print(df['status'].describe())
+
+
+#EXPERIMENTAL
+
+#Creating Columns
+import pandas as pd
+df = pd.DataFrame({'flower':[2,4,6],'quantity':[1,3,5],'price':[10,20,30],'freebies':[1,2,3]})
+#Creating New Columns
+df['total']=df['flower']*df['quantity']
+print(df)
+
+#Rename
+df.rename(columns={'flower':'candies','quantity':'qty'},inplace=True)
+print(df)
+
+#reorder Columns
+df = df[['qty','candies','freebies','price','total']]
+print(df)
+
+#Apply Function to a Column
+#Apply %22 discount
+df['discount']=df['candies']*0.22
+print(df)
+
+#Conditional Column (if/else logic)
+df['status']=df['qty'].apply(lambda x: 'Bulk' if x > 2 else 'Regular')
+print(df)
+
+#reorder Columns
+df = df[['qty','candies','price','total','status','discount','freebies']]
+print(df)
+
+#Combine Columns - Add Subtract or Divide
+df['ratio']=df['candies']/df['discount']
+print(df)
+
+#reorder Columns
+df = df[['qty','ratio','candies','price','total','status','discount','freebies']]
+print(df)
+
+#Combine Columns - Add Subtract or Divide
+df['ratio']=df['candies']/df['discount']
+print(df)
+
+#Row Operations
+#Load Data
+df = pd.read_csv("sure_data.csv")
+print(df.head())  #show first 5 rows
+print(df.shape)   #rows x columns
+
+#Display the data set
+pd.set_option('display.max_rows', None)      #show all rows
+pd.set_option('display.max_columns', None)   #show all columns
+pd.set_option('display.width', None)      #no line wrapping
+pd.set_option('display.max_colwidth', None)      #show full cell content
+
+# ----- DISPLAY ALL DATA ----- 
+print(df)
+
+#Select Specific Rows
+df.iloc[0]
+df.iloc[8]
+df.iloc[1:3]
+df.iloc[5:13]
+df.iloc[:13]
+
+#Add New Row
+new_row = {'y1':1.5,'y2':0.90,'x1':0.80,'x2':0.90}
+df.loc[len(df)]=new_row
+print(df)
+
+#Delete Row
+df = df.drop(201)  #remove row with index 2
+df = df.reset_index(drop=True)  #Reset row numbering
+print(df)
+
+#Filter Rows (By Condition)
+#By Age
+df[df['y1']>2]
+df[df['y2']<2]
+df[df['y1']==2]
+df[df['y1']==1.312015]
+
+#Apply function to each row
+#Apply function to each row
+df['y1']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
+print(df)
+
+
