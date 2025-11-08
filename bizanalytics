@@ -408,3 +408,48 @@ df['y1']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1
 print(df)
 df['y2']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
 print(df)
+
+#Aggregation - means summarixzing or combining data
+import pandas as pd
+data = {
+        'Company':['t','u','v','x','y','z'],
+        'Agent':['Alpha','Bravo','Charlie','Delta','Echo','Fox'],
+        'Chocolates':[10000,15500,8000,25300,30000,7000],
+        'Loyalty':[7,13,18,11,22,16]
+}
+
+df = pd.DataFrame(data)
+print(df)
+df['Chocolates'].sum()
+df['Chocolates'].mean()
+df['Chocolates'].max()
+df['Chocolates'].min()
+df['Chocolates'].count()
+df['Chocolates'].median()
+
+#Aggregate Multiple Columns at once
+df.agg({
+        'Chocolates':['sum','mean','max'],
+        'Loyalty':['mean','min','median','count']
+        })
+    
+#Aggregation by Group
+df.groupby('Company')['Chocolates'].mean()
+df.groupby('Company')['Chocolates'].median()
+
+#Another example
+import pandas as pd
+df = pd.read_csv("sure_data.csv")
+
+df['x3'].sum()
+df['x2'].mean()
+df['x1'].max()
+df['y1'].min()
+df['y2'].count()
+df['x3'].median()
+
+df.agg({
+    'x3':['sum','mean','max'],
+    'x2':['mean','min','median','count']
+})
+
