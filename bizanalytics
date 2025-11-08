@@ -389,7 +389,10 @@ df.loc[len(df)]=new_row
 print(df)
 
 #Delete Row
-df = df.drop(201)  #remove row with index 2
+df = df.drop(200)  #remove row with index 2
+df = df.reset_index(drop=True)  #Reset row numbering
+print(df)
+df = df.drop(199)  #remove row with index 2
 df = df.reset_index(drop=True)  #Reset row numbering
 print(df)
 
@@ -401,9 +404,7 @@ df[df['y1']==2]
 df[df['y1']==1.312015]
 
 #Apply function to each row
-#Apply function to each row
 df['y1']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
 print(df)
 df['y2']=df.apply(lambda row: 'Positive' if row ['y2']>0 else 'Negative', axis=1)
 print(df)
-
